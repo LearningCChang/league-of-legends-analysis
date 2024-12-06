@@ -1,0 +1,6 @@
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme 
+
+title: [League of Legends Analysis]
+description: [This data science project explores the impact of early game objectives in League of Legends, specifically analyzing how destroying the first middle tower affects a team's likelihood of winning. Through statistical analysis and machine learning models, we investigate whether securing this early game advantage is a significant predictor of match outcomes.]
