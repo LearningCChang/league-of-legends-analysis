@@ -4,7 +4,7 @@ Analysis of League of Legends' 2022 dataset.
 Homework for EECS 398 at U-M
 
 ## Introduction
-League of Legends is a popular multiplayer video game where two teams of 5 players battle to destroy each other’s base. The game map is split up into three lanes: top, middle, and bottom. Each team has towers in each lane that protect the base, and players of the opposing team have to destroy these turrets to advance and destroy the enemy base. The question we are looking to investigate further is how much of an impact destroying the first mid-tower has on winning.
+League of Legends is a popular multiplayer video game where two teams of 5 players battle to destroy each other’s base. The game map is split up into three lanes: top, middle, and bottom. Each team has towers in each lane that protect the base, and players of the opposing team have to destroy these turrets to advance and destroy the enemy base. The question we are looking to investigate further is how much does the probability of winning a match change based on key performance indicators such as team kills per minute, total gold, and the first to capture the midtower.
 We chose to work with the League of Legends’ dataset because we felt that working on a dataset from a popular video game would lead to a more personalized project that would be not only more appealing on our resumes but also since it’s something we are somewhat familiar with. Expanding on this, our familiarity with video game mechanics and terminology allows us to understand the significance of the various features better. Furthermore, working on real-world data we are passionate about increases our motivation for this project, and our analysis of this dataset could uncover insights that are valuable not only for academic purposes but also for practical applications in our gaming experiences.
 
 ## Data Cleaning and Exploratory Data Analysis
@@ -33,10 +33,9 @@ The scatter plot above shows an interesting relationship between a team's KPM an
 ></iframe>
 
 This histogram shows the distribution of team kills per minute (KPM) across all games. 
-A key trend we observed is tat most games have a KPM between 0.2 and 0.6, with the peak between 0.3 and 0.4.
+A key trend we observed is that most games have a KPM between 0.2 and 0.6, with the peak between 0.3 and 0.4.
 The histogram is right-skewed, with some exceptionally aggressive games, where the kpm is greater than 1.0.
-This metric is important for our analysis since it helps us undestand the pace of the game and team aggression levels during the game, 
-which may correlate to whether or not teams can secure the first mid-tower in their games.
+This metric is important for our analysis since it helps us undestand the pace of the game and team aggression levels during the game, which may correlate to whether or not teams can secure a victory in their game.
 
 ### Bivariate Analysis
 <iframe
@@ -100,5 +99,5 @@ We used GridSearchCV with 5-fold cross-validation to tune our max-depth hyperpar
 and finding the optimal max_depth was 6.
 The final model achieved notiably better accuracy of 94.33% compared to the baseline model's 86.1%. 
 The confusion matrix shows strong performance in indentifying wins and losses.
-Our tree structure reveals that deaths <= 0.418 and total gold are crucial decision points in determining whether or not a team that has obtained the first mid tower will win the match.
+Our tree structure reveals that deaths <= 0.418 and total gold are crucial decision points in determining whether or not a team will win the match.
 Our improvement in both accuracy and interpretability suggests that our model selection choice and feature engineering successfully captured the complex relationships between first midtower, total gold, deaths, and kpm in League of Legends game outcomes.
