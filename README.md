@@ -1,7 +1,9 @@
 # league-of-legends-analysis
 Analysis of League of Legends' 2022 dataset. 
 
-Homework for EECS 398 at U-M
+Final Project for EECS 398 at U-M
+
+Website: https://learningcchang.github.io/league-of-legends-analysis/
 
 ## Introduction
 League of Legends is a popular multiplayer video game where two teams of 5 players battle to destroy each other’s base. The game map is split up into three lanes: top, middle, and bottom. Each team has towers in each lane that protect the base, and players of the opposing team have to destroy these turrets to advance and destroy the enemy base. The question we are looking to investigate further is how much does the probability of winning a match change based on key performance indicators such as team kills per minute, total gold, and the first to capture the midtower.
